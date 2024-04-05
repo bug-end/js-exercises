@@ -1,3 +1,5 @@
+import { expect } from 'chai';
+
 // This function will break up camel casing, using a space between words.
 
 const breakCamelCase = (str) => {
@@ -12,3 +14,11 @@ const breakCamelCase = (str) => {
   }
   return result;
 };
+
+// Test cases
+describe('breakCamelCase', () => {
+  it('should break up camel casing', () => {
+    expect(breakCamelCase('helloWorld')).to.equal('hello World');
+    expect(breakCamelCase('breakCamelCase')).to.equal('break Camel Case');
+  });
+});
